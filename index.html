@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html >
+  <head>
+    <meta charset="UTF-8">
+    <title>Pomodoro Clock (WIP)</title>
+    
+    
+    
+    <link rel='stylesheet prefetch' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css'>
+
+        <link rel="stylesheet" href="css/style.css">
+
+    
+    
+    
+  </head>
+
+  <body>
+
+    <link href='https://fonts.googleapis.com/css?family=Roboto:400,300,900' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Ubuntu:400,700' rel='stylesheet' type='text/css'>
+
+<body ng-app="app" ng-cloak>
+	<div class="container ng-cloak" ng-controller="ctrl">
+		<div class="header">
+			<h1 class="mainTitle">Phil's Pomodoro Clock</h1>
+			<h2 class="subTitle"><em>Increase Your Productivity The Right Way</em></h2>
+		</div>
+		
+		<div class="clock flexCenter">
+			<h1>{{minOut}}:{{secOut}}</h1>	
+			<p>{{status}}</p>
+		</div>
+		
+		<div class="row buttonsRow text-center">
+			<span ng-click="startTimer()">START</span> 
+			<span ng-click="pauseTimer()" ng-show="!isPaused">PAUSE</span>
+						<span ng-click="resume()" ng-show="isPaused">RESUME</span>
+<span ng-click="resetTimer()">RESET</span>
+		</div>
+		
+				<div class="settings" ng-hide="isRunning">
+			<div class="row">
+				
+				<div class="col-xs-3 col-xs-offset-3 flexCenter">
+					<h3 class="settingsTitle">Break Time</h3>
+					<div class="row">
+						<div class="col-xs-4" ng-click="breakTimeMinus()">-</div>
+						<div class="col-xs-4">{{breakTime}}</div>
+						<div class="col-xs-4" ng-click="breakTimePlus()">+</div>
+					</div>
+				</div>
+				
+				<div class="col-xs-3 flexCenter">
+					<h3 class="settingsTitle">Work Time</h3>
+					<div class="row">
+						<div class="col-xs-4" ng-click="workTimeMinus()">-</div>
+						<div class="col-xs-4">{{workTime}}</div>
+						<div class="col-xs-4" ng-click="workTimePlus()">+</div>
+					</div>
+				</div>
+				
+			</div>
+			
+		</div>
+</div>
+
+</body>
+    <script src='http://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.2/angular.min.js'></script>
+<script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js'></script>
+
+        <script src="js/index.js"></script>
+
+    
+    
+    
+  </body>
+</html>
